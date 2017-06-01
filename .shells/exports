@@ -1,0 +1,31 @@
+# Added by Jamin. 2017-05-25 14:57:25
+
+
+
+export PATH=$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH
+export PKG_CONFIG_PATH=/usr/local/lib/pkgconfig:$PKG_CONFIG_PATH
+export EDITOR='vim' ALTERNATE_EDITOR='vim' VISUAL='gvim'
+
+
+# Bash History
+export HISTCONTROL=$HISTCONTROL${HISTCONTROL+,}ignoredups
+export HISTCONTROL=ignoreboth
+export HISTIGNORE='&:clear:ls:cd:[bf]g:exit:[ t\]*'
+
+
+#proxy setting: added by jamin in 2017年 02月 28日 星期二 11:05:50 CST
+export http_proxy="http://10013:Jamin1214@10.10.10.10:3128/";
+export ftp_proxy="http://10013:Jamin1214@10.10.10.10:3128/";
+export https_proxy="http://10013:Jamin1214@10.10.10.10:3128/";
+
+# mo SDK settings
+export SDK_PATH=${HOME}/data/opt/Xilinx/SDK/2016.3/bin
+export PATH=${SDK_PATH}:${PATH}
+
+# gcc g++ export
+export CC=/usr/bin/gcc
+export CXX=/usr/bin/g++
+
+# wps settings
+export WPS_PATH=/opt/bin/wps_office
+export PATH=${WPS_PATH}:${PATH}

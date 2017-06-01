@@ -1,0 +1,24 @@
+project(moCS)
+cmake_minimum_required(VERSION 2.8)
+set( CMAKE_EXPORT_COMPILE_COMMANDS ON )
+
+
+# Cross Compiling setting.Added by Jamin. 2017-05-16 10:08:38
+set(CMAKE_SYSTEM_NAME Linux)
+set(CMAKE_C_COMPILER "/home/jamin/data/opt/Xilinx/SDK/2016.3/gnu/aarch32/lin/gcc-arm-linux-gnueabi/bin/arm-linux-gnueabihf-gcc")
+#set(CMAKE_LINKER "/home/jamin/data/opt/Xilinx/SDK/2016.3/gnu/aarch32/lin/gcc-arm-linux-gnueabi/arm-linux-gnueabihf/bin/ld")
+set(CMAKE_LINKER "/home/jamin/data/opt/Xilinx/SDK/2016.3/gnu/aarch32/lin/gcc-arm-linux-gnueabi/bin/arm-linux-gnueabihf-gcc")
+set(CMAKE_FIND_ROOT_PATH "/home/jamin/data/opt/Xilinx/SDK/2016.3/gnu/aarch32/lin/gcc-arm-linux-gnueabi/arm-linux-gnueabihf")
+set(CMAKE_FIND_ROOT_PATH_MODE_PROGRAM NEVER)
+set(CMAKE_FIND_ROOT_PATH_MODE_LIBRARY ONLY)
+set(CMAKE_FIND_ROOT_PATH_MODE_INCLUDE ONLY)
+
+
+#add_definitions( -D MO_DEBUG )
+#add_definitions(-c -fmessage-length=0 -MT"$@")
+#add_definitions(-MMD -MP -MM)
+add_definitions(-DMO_DEBUG -Wall -O0 -g3 -c -fmessage-length=0 -MT"$@" -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@)")
+
+INCLUDE_DIRECTORIES(${CMAKE_SOURCE_DIR}/source/include/)
+aux_source_directory(${CMAKE_SOURCE_DIR}/source/src SRC_LIST)
+add_executable(${PROJECT_NAME} ${SRC_LIST})

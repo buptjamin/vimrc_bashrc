@@ -1,0 +1,120 @@
+# Cute shell shortcuts
+alias ls='ls --sort=extension --color=auto'
+alias ll='ls -lh'
+alias lal='ls -alh'
+alias la='ls -A'
+alias pms='sudo pm-suspend'
+alias psg='ps -A | grep'
+alias se='sudo gvim'
+alias e='gvim'
+alias grep='grep --color '
+alias smi='sudo make install'
+alias l='ls -CF'
+
+# This one is to take care of make
+# Give me a nice, distinguishable make output
+#alias make='clear && make'
+#alias m='make'
+
+
+# Some more, to avoid mistakes
+#alias rm='rm -i'
+#alias cp='cp -i'
+#alias mv='mv -i'
+
+#mount alias .By Jamin
+alias jmData='sudo mount -t cifs //2001:da8:215:201:e1bc:b95a:fc9f:a69a/Data /home/jamin/jmnt/lab213/ -o username=user213,uid=1000,gid=1000,password=213;pushd /home/jamin/jmnt/lab213/;'
+alias jmyan='sudo mount -t cifs //2001:da8:215:201:e1bc:b95a:fc9f:a69a/yan /home/jamin/jmnt/yan/ -o username=user213,uid=1000,gid=1000,password=213;pushd /home/jamin/jmnt/yan/;'
+alias jmtest='sudo mount -t cifs //2001:da8:215:201:e1bc:b95a:fc9f:a69a/jwin /home/jamin/node.js/j-test/ -o username=user213,uid=1000,gid=1000,password=213;pushd /home/jamin/node.js/j-test/;'
+alias jmdownload='sudo mount -t cifs //2001:da8:215:201:e1bc:b95a:fc9f:a69a/Users /home/jamin/Downloads/lab213 -o username=user213,uid=1000,gid=1000,password=213;pushd  /home/jamin/Downloads/lab213; pushd user213/Downloads/'
+alias jumData='sudo umount /home/jamin/jmnt/lab213'
+alias jumdownload='sudo umount /home/jamin/Downloads/lab213'
+alias toDisk='sudo mount -t cifs //2001:da8:215:201:e1bc:b95a:fc9f:a69a/fwin /home/frank/fwin -o username=user213,uid=1001,gid=1000,password=213;pushd /home/frank/fwin;'
+
+
+
+# SSH Alias
+alias jslab='ssh jamin@lab'
+alias js6lab='ssh jamin@2001:da8:215:201:225:64ff:feb6:59da'
+alias jrd='sshfs jamin@[2001:da8:215:201:225:64ff:feb6:59da]:/home/jamin/ /home/jamin/mnt/;pushd /home/jamin/mnt/;'
+alias jrp='sshfs jamin@[2001:da8:215:201:225:64ff:feb6:59da]:/project /home/jamin/jmnt/project; pushd /home/jamin/jmnt/project/voicePro/seg-pro/src/'
+alias jdrd='sudo umount /home/jamin/mnt/'
+alias sx='ssh sun@10.102.7.127'
+alias logserver='ssh admin@10.102.4.220'
+alias jpb='ssh pangbo@10.10.0.6'
+alias jxpb='ssh -X pangbo@10.10.0.6'
+alias jwj='ssh wangjie@10.10.0.9'
+alias jxwj='ssh -X wangjie@10.10.0.9'
+alias jwx='ssh wangxin@10.10.0.4'
+alias jxwx='ssh wangxin@10.10.0.4'
+
+#met oak server
+alias jgit='ssh gitadmin@10.10.10.12'
+
+alias jmomo='ssh momo@10.10.0.12'
+alias jxmomo='ssh -X momo@10.10.0.12'
+
+#scp alias
+
+
+#sshfs alias
+alias jsfs='sshfs jamin@[2001:da8:215:201:225:64ff:feb6:59da]:/project/ /home/jamin/mnt/'
+
+
+# Git Commands
+# Add and Commit are used as functions
+alias gpo='git push origin master'
+alias gp='git pull'
+alias gs='git status'
+alias gd='git-diff'
+alias gr='git-reflog'
+alias glf='git-ls-files'
+alias gm='git commit -m'
+
+
+# Shortcut to test quick changes to bashrc
+alias reload='source ~/.bashrc'
+
+
+
+
+alias jsc='xrandr  -s 1024x768;xrandr --output VGA1 --same-as LVDS1 --auto'
+alias labjsc='xrandr  --output VGA1 --left-of LVDS1 --mode 1440x900 --output LVDS1 --mode 1366x768'
+alias labjdsc='xrandr --output  LVDS1 --mode 1366x768 --output VGA1 --off'
+alias jdsc='xrandr --output VGA1 --off'
+alias jasyn='scp -r jamin@lab:/home/jamin/jasyn /home/jamin/'
+alias camorama1='camorama -d /dev/video1'
+
+#jamin added for multi-media play
+alias jplay='pushd /home/jamin/d/bt/play/'
+alias jpro='pushd /opt/voiceSeg_python'
+alias mpro='pushd /home/jamin/svn/MKSW001/trunk/oakEcology/Packages/Source'
+alias scpro='pushd /home/jamin/workspace/moSC/senderPc'
+alias jy='dict -d langdao-ec'
+alias jyy='dict -d langdao-ce'
+alias jifreset='sudo ifconfig enp9s0 down && sleep 5 && sudo ifconfig enp9s0 up'
+alias jlearn='pushd /media/jamin/Jamin/Bt_learning/Standford\ CS231n'
+alias jdebugpy='pushd /opt/voiceSeg_python/preprocessing/ && vim debug_info_usage.py'
+alias jgp='pushd /home/jamin/d/graduateProject/1论文主体'
+alias jmount7='pushd /media/jamin/Jamin/linuxOS_backup && sudo mount ./ubuntu_1604_sdb7_backup.img ~/mnt/disk7 && pushd /home/jamin/mnt/disk7/home/jamin '
+
+alias jmsc='pushd ~/workspace/moSC/moCS_Sender/'
+
+
+alias jmount9='pushd /media/jamin/Jamin/linuxOS_backup && sudo mount ./ubuntu_1604_sdb9_backup.img ~/mnt/disk9 && pushd /home/jamin/mnt/disk9/home/jamin '
+alias ypwd='pwd | xsel -b'
+alias jcp='pwd | xsel -b'
+alias jls='ls -alt | head -n 15'
+alias j10='ssh root@192.168.80.10'
+alias jcpDemo='scp /home/jamin/workspace/demo_receiver/Release/demo_receiver.elf root@192.168.80.10:/home/root/'
+
+
+#rm build
+#g++ alias Jamin-Mark
+alias jdb='g++ -std=c++11 -o exeToRun -g'
+
+alias jrm='rm -rf ../build/*'
+alias jcmake='cmake -DCMAKE_BUILD_TYPE=Debug ..'
+alias jcmaker='cmake -DCMAKE_BUILD_TYPE=Release ..'
+alias jmake='make VERBOSE=1'
+alias jrebuild='jrm && jcmake && jmake'

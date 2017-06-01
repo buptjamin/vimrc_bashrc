@@ -1,0 +1,2 @@
+#set color schema .By jamin
+eval `dircolors /home/jamin/git.clone/dircolors-solarized/dircolors.ansi-universal`
